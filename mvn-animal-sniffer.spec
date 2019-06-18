@@ -4,7 +4,7 @@
 #
 Name     : mvn-animal-sniffer
 Version  : 1.15
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.jar
 Source0  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.jar
 Source1  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar
