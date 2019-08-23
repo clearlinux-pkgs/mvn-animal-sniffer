@@ -4,20 +4,26 @@
 #
 Name     : mvn-animal-sniffer
 Version  : 1.15
-Release  : 4
+Release  : 5
 URL      : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.jar
 Source0  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.jar
 Source1  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar
 Source2  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.pom
-Source3  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.jar
-Source4  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.pom
-Source5  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-parent/1.14/animal-sniffer-parent-1.14.pom
-Source6  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-parent/1.15/animal-sniffer-parent-1.15.pom
-Source7  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.pom
+Source3  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.14/animal-sniffer-maven-plugin-1.14.jar
+Source4  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.14/animal-sniffer-maven-plugin-1.14.pom
+Source5  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.jar
+Source6  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.pom
+Source7  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-parent/1.14/animal-sniffer-parent-1.14.pom
+Source8  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-parent/1.15/animal-sniffer-parent-1.15.pom
+Source9  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.14/animal-sniffer-1.14.jar
+Source10  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.14/animal-sniffer-1.14.pom
+Source11  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
 Requires: mvn-animal-sniffer-data = %{version}-%{release}
+BuildRequires : apache-maven
+BuildRequires : buildreq-mvn
 
 %description
 No detailed description available
@@ -45,20 +51,32 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/anima
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.14
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.14/animal-sniffer-maven-plugin-1.14.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.14
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.14/animal-sniffer-maven-plugin-1.14.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.pom
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-parent/1.14
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-parent/1.14/animal-sniffer-parent-1.14.pom
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-parent/1.14/animal-sniffer-parent-1.14.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-parent/1.15
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-parent/1.15/animal-sniffer-parent-1.15.pom
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-parent/1.15/animal-sniffer-parent-1.15.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.14
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.14/animal-sniffer-1.14.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.14
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.14/animal-sniffer-1.14.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.15
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.pom
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.pom
 
 
 %files
@@ -68,9 +86,13 @@ cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/anima
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar
 /usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.pom
+/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.14/animal-sniffer-maven-plugin-1.14.jar
+/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.14/animal-sniffer-maven-plugin-1.14.pom
 /usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.jar
 /usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-maven-plugin/1.15/animal-sniffer-maven-plugin-1.15.pom
 /usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-parent/1.14/animal-sniffer-parent-1.14.pom
 /usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer-parent/1.15/animal-sniffer-parent-1.15.pom
+/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.14/animal-sniffer-1.14.jar
+/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.14/animal-sniffer-1.14.pom
 /usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.jar
 /usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.pom
