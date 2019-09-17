@@ -4,7 +4,7 @@
 #
 Name     : mvn-animal-sniffer
 Version  : 1.15
-Release  : 7
+Release  : 8
 URL      : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.jar
 Source0  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.jar
 Source1  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar
@@ -22,7 +22,9 @@ Source12  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.14
 Source13  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.14/animal-sniffer-1.14.pom
 Source14  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.15/animal-sniffer-1.15.pom
 Source15  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.jar
-Source16  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.pom
+Source16  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.jar
+Source17  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.pom
+Source18  : https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -96,7 +98,13 @@ mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sni
 cp %{SOURCE15} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.17
-cp %{SOURCE16} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.pom
+cp %{SOURCE16} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.17
+cp %{SOURCE17} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.17
+cp %{SOURCE18} %{buildroot}/usr/share/java/.m2/repository/org/codehaus/mojo/animal-sniffer/1.17/animal-sniffer-1.17.pom
 
 
 %files
